@@ -6,8 +6,11 @@ import * as styles from './LastCheck.styles';
 
 export const LastCheck: FC<LastCheckProps> = ({ lastCheckDate, onCheckForUpdates, disabled = false }) => (
   <div className={styles.lastCheck}>
-    <p>Last check: {lastCheckDate}</p>
+    <p>
+      Last check: <span data-qa="udpate-last-check">{lastCheckDate}</span>
+    </p>
     <Button
+      data-qa="update-last-check-button"
       variant="link"
       size="sm"
       onClick={onCheckForUpdates}

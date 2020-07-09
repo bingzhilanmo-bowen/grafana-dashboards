@@ -15,8 +15,10 @@ export const AvailableUpdate: FC<AvailableUpdateProps> = ({ nextVersionDetails }
     <section className={styles.availableUpdate} onClick={handleToggleShowFullVersion}>
       <p>{Messages.availableVersion}:&nbsp;</p>
       <p className={styles.availableUpdateVersion}>
-        {showFullVersion ? nextFullVersion : nextVersion}{' '}
-        <span className={styles.releaseDate}>({nextVersionDate})</span>
+        <span data-qa="update-latest-version">{showFullVersion ? nextFullVersion : nextVersion}</span>{' '}
+        <span data-qa="update-latest-release-date" className={styles.releaseDate}>
+          ({nextVersionDate})
+        </span>
         {newsLink && (
           <>
             {' '}

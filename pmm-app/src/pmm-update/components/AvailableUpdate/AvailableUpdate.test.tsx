@@ -26,7 +26,7 @@ describe('AvailableUpdate::', () => {
 
   it('should show only the short version by default', () => {
     expect(wrapper?.find('section > p').length).toEqual(2);
-    expect(wrapper?.find('section > p > span').length).toEqual(1);
+    expect(wrapper?.find('section > p > span').length).toEqual(2);
     expect(
       wrapper
         ?.find('section > p')
